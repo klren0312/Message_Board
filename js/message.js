@@ -20,7 +20,7 @@ function addLi(obj,snap){
 }
 
 rf.orderByChild("title").on("child_added", function(snapshot) {
-  console.log(snapshot.key() + " was " + snapshot.val().title+snapshot.val().word+ " meters tall");
+
   addLi("wordul",snapshot);
   
 });
