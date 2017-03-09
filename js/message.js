@@ -16,7 +16,7 @@ function addLi(obj,snap){
 
 	li.setAttribute("id","newli");
 	li.innerHTML = "<div class='alert alert-success' role='alert'><h4>"+snap.val().title+"</h4><hr><br><p>"+snap.val().word+"</p><br></div>";
-	ul.appendChild(li);
+	ul.insertBefore(li,ul.firstChild);
 }
 
 rf.orderByChild("title").on("child_added", function(snapshot) {
